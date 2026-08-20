@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devid · Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,300&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <div id="splash-overlay"></div>
+    <div id="mouse-glow"></div>
+    <div id="custom-cursor">
+        <img id="cursor-img" src="assets/cursor/cursor.png" alt="Cursor" />
+    </div>
+
+    <!-- Audio & Pemutar CD -->
+    <audio id="bgAudio" loop preload="auto">
+        <source src="https://www.bensound.com/bensound-music/bensound-moonlight.mp3" type="audio/mpeg">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        <source src="assets/audio/Lukrembo-BobaTea(freetouse.com).mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="vinyl-player-container" id="vinylContainer">
+        <div class="vinyl-disc" id="vinylDisc">
+            <div class="vinyl-grooves"></div>
+        </div>
+        <button class="vinyl-btn" id="audioToggleBtn" aria-label="Play/Pause Audio">
+            <i class="fas fa-play" id="audioIcon"></i>
+        </button>
+    </div>
+
+    <div class="container">
+        <header class="hero">
+            <div class="logo">
+                <h1>Devid <span>✦ Portfolio</span></h1>
+            </div>
+            <button class="hamburger-toggle" id="hamburgerToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-links" id="navLinks">
+                <a class="active" data-page="index"><i class="fas fa-home"></i> Beranda</a>
+                <a data-page="karya"><i class="fas fa-th"></i> Karya</a>
+                <a data-page="kontak"><i class="fas fa-envelope"></i> Kontak</a>
+            </nav>
+        </header>
+
+        <section class="page active" id="page-index">
+            <div class="index-content">
+                <div class="index-text">
+                    <div class="greeting">
+                        Halo, saya <strong>Devid</strong><br />
+                        <span style="font-weight:200; font-size:0.8em; color:#a0b8e8;">— Desainer & Pengembang
+                            antarmuka</span>
+                    </div>
+                    <p>
+                        Saya Seorang Profesional di bidang pengembangan web dan aplikasi yang menghadirkan solusi digital inovatif, dibangun berdasarkan pengalaman nyata dan standar teknis yang matang.
+                    </p>
+                    <p style="font-size:1rem; color:#8aa4d0;">
+                        <i class="fas fa-code" style="margin-right:10px; color:#4a7aff;"></i>
+                        Javascript · Bootstrap · PHP
+                    </p>
+                    <div class="cta">
+                        <a href="#" data-page="karya"><i class="fas fa-arrow-right"></i> Lihat Karya</a>
+                    </div>
+                </div>
+
+                <div class="profile-photo-wrapper">
+                    <div class="profile-photo" id="profilePhoto">
+                        <img src="assets/img/hero.jpg" alt="Foto Devid" />
+                    </div>
+                    <div class="stars">
+                        <span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page" id="page-karya">
+            <h2 class="page-title"><i class="fas fa-th"></i> Karya & Project</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img class="project-image" src="https://picsum.photos/seed/nebula/600/400" alt="Nebula Dashboard" />
+                    <div class="project-content">
+                        <h3>Nebula Dashboard</h3>
+                        <p>Analitik real-time dengan visualisasi data interaktif dan tema gelap.</p>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-globe"></i> Website</a>
+                            <a href="#"><i class="fab fa-github"></i> Github</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img class="project-image" src="https://picsum.photos/seed/aurora/600/400" alt="Aurora AI" />
+                    <div class="project-content">
+                        <h3>Aurora AI</h3>
+                        <p>Asisten berbasis AI untuk generasi konten dan analisis sentimen.</p>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-globe"></i> Website</a>
+                            <a href="#"><i class="fab fa-github"></i> Github</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img class="project-image" src="https://picsum.photos/seed/stellar/600/400" alt="Stellar UI" />
+                    <div class="project-content">
+                        <h3>Stellar UI</h3>
+                        <p>Library komponen UI dengan sistem desain yang dapat disesuaikan.</p>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-globe"></i> Website</a>
+                            <a href="#"><i class="fab fa-github"></i> Github</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img class="project-image" src="https://picsum.photos/seed/cosmos/600/400" alt="Cosmos Chain" />
+                    <div class="project-content">
+                        <h3>Cosmos Chain</h3>
+                        <p>Blockchain sederhana untuk smart contract dan transaksi mikro.</p>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-globe"></i> Website</a>
+                            <a href="#"><i class="fab fa-github"></i> Github</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page" id="page-kontak">
+            <h2 class="page-title"><i class="fas fa-envelope"></i> Kontak</h2>
+            <div
+                style="max-width:600px; margin-top:1.5rem; font-weight:300; font-size:1.2rem; color:#b8ccf5; line-height:2.2;">
+                <p><i class="fas fa-paper-plane" style="width:30px; color:#5a82ff;"></i> @AlaskaFuture</p>
+                <p><i class="fab fa-github" style="width:30px; color:#5a82ff;"></i> github.com/Devid-Wu</p>
+                <p><i class="fab fa-message" style="width:30px; color:#5a82ff;"></i> devidwubin.dg@gmail.com</p>
+                <p style="margin-top:1.8rem; font-size:1rem; color:#7a96c0;">
+                    <i class="fas fa-map-pin" style="margin-right:10px;"></i> BATAM CITY DEVELOPER ✦
+                </p>
+            </div>
+        </section>
+
+        <div class="footer-note">
+            <i class="fas fa-cloud"></i>
+            <span style="opacity:0.4;">·</span>
+            Devid · &copy; Copyright Portofolio 2026
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
