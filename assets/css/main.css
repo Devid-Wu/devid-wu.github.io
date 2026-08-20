@@ -43,6 +43,28 @@ body {
     filter: drop-shadow(0 0 6px rgba(58, 122, 255, 0.6));
 }
 
+/* 1. Sembunyikan kursor default dan aktifkan kursor custom HANYA pada perangkat ber-mouse */
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+
+  #custom-cursor {
+    display: block; /* Tampilkan elemen kursor kustom di desktop */
+  }
+}
+
+/* 2. Pada perangkat mobile/touchscreen, kembalikan kursor ke normal dan sembunyikan elemen kursor kustom */
+@media (hover: none) and (pointer: coarse) {
+  * {
+    cursor: auto !important; /* Kursor bawaan HP muncul kembali */
+  }
+
+  #custom-cursor {
+    display: none !important; /* Elemen kursor kustom disembunyikan total */
+  }
+}
+
 ::-webkit-scrollbar {
     width: 5px;
 }
